@@ -57,7 +57,7 @@ public class UIController : MonoBehaviour
 
     public void ChangeScaleValue()
     {
-        scaleText.text = scaleSlider.value.ToString();
+        scaleText.text = scaleSlider.value.ToString("F3");
         OnValueChange?.Invoke(colorA.color, colorB.color, scaleSlider.value, resolution.value);
     }
 

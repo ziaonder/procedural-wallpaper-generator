@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -7,6 +8,7 @@ public class ExportImage : MonoBehaviour
 {
     public static ExportImage Instance;
     public string fileName = "wallpaper by @ziaonder";
+    string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
     public static Texture2D textureToSave;
 
     private void Awake()
@@ -23,7 +25,7 @@ public class ExportImage : MonoBehaviour
     public void SaveTextureAsPNG()
     {
         byte[] bytes = textureToSave.EncodeToPNG();
-        string filePath = Path.Combine(Application.dataPath, fileName + " " + Time.deltaTime + ".png");
+        string filePath = Path.Combine(downloadsPath, fileName + " " + Time.deltaTime + ".png");
 
         File.WriteAllBytes(filePath, bytes);
     }
