@@ -25,7 +25,8 @@ public class ExportImage : MonoBehaviour
     public void SaveTextureAsPNG()
     {
         byte[] bytes = textureToSave.EncodeToPNG();
-        string filePath = Path.Combine(downloadsPath, fileName + " " + Time.deltaTime + ".png");
+        string filePath = Path.Combine(downloadsPath, fileName + " " + 
+            UIController.Instance.scaleSlider.value.ToString("F3") + " scale" + ".png");
 
         File.WriteAllBytes(filePath, bytes);
     }

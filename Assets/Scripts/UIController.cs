@@ -9,6 +9,7 @@ public class UIController : MonoBehaviour
 {
     [SerializeField] Toggle toggle1, toggle2;
     [SerializeField] Image colorA, colorB;
+    public static UIController Instance;
     Toggle checkedToggle;
     public FlexibleColorPicker fcp;
     public TextMeshProUGUI scaleText;
@@ -23,6 +24,14 @@ public class UIController : MonoBehaviour
     private void Awake()
     {
         checkedToggle = toggle1;
+
+        if(Instance != null)
+        {
+            if (Instance != this)
+                Destroy(Instance.gameObject);
+        }
+        else
+            Instance = this;
     }
 
     private void Start()
