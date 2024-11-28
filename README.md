@@ -1,10 +1,10 @@
 App uses Unity's built-in Perlin noise method. 
 App can export to the given dimensions;
 - Landscape
-1920x1080
+1920x1080  
 1366x768
 - Portrait
-1080x1920
+1080x1920  
 368x1366
 
 Scale for perlin noise starts from 0.001 and goes to 0.999.
