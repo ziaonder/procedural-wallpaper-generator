@@ -1,9 +1,9 @@
 App uses Unity's built-in Perlin noise method. 
 App can export to the given dimensions;
-- Landscape
+- Landscape  
 1920x1080  
 1366x768
-- Portrait
+- Portrait  
 1080x1920  
 368x1366
 
